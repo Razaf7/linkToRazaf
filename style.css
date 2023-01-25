@@ -1,0 +1,28 @@
+*, :after, :before{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #fafaf9;
+    font-family: 'UnistraA-Regular','Courier New', Courier, monospace;
+}
+
+/* ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+@media (min-width: 800px) {
+}
+
+/* ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+@media (max-width: 800px) {
+}
+
+
+@font-face {
+    font-family: "UnistraA-Regular";
+    src: url("font/UnistraA-Regular.ttf") format("truetype");
+}
