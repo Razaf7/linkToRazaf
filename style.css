@@ -10,7 +10,9 @@ body{
     background-color: #fafaf9;
     font-family: 'UnistraA-Regular','Courier New', Courier, monospace;
 }
-
+h1{
+    color: blue;
+}
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
 @media (min-width: 800px) {
