@@ -7,24 +7,137 @@ body{
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-color: #fafaf9;
-    font-family: 'UnistraA-Regular','Courier New', Courier, monospace;
+    font-size: 1.5em;
+    background-color: #2F4550;
+    color: #fafaf9;
+    font-family: 'UnistraB-Regular','Courier New', Courier, monospace;
 }
-h1{
-    color: blue;
-}
+
 /* ///////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////// */
+//////////////////////////////////////////////////////////////
+--------------------------all device------------------------*/
+.title{
+    font-size: 2em;
+    font-family: 'UnistraD-Bold','Courier New', Courier, monospace;
+}
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+--------------------property on laptop----------------------*/
 @media (min-width: 800px) {
+    header{
+        width: 100vw;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        width: 100vw;
+        min-height: 500px;
+        padding: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .box:nth-child(2n){
+        display: flex;
+        flex-direction: row-reverse;
+        color: black;
+    }
+    .shape {
+        background-color: aqua;
+        width: 300px;
+        height: 300px;
+        border-radius: 30% 10% 100% 10%;
+        transition: 1s;
+    }
+    .box:hover .shape{
+        border-radius: 100%;
+        width: 400px;
+        height: 400px;
+    }
+    .text:nth-child(1){
+        padding: 50px;
+    }
+    .box:nth-child(2n) .shape {
+        display: none;
+        background-color: blue;
+        border-radius: 10% 30% 10% 100%;
+    }
+    ul{
+        list-style-type: none;
+    }
+
+    /*indetification*/
+    .box:nth-child(2n){
+        background-color: #7bade1;
+    }
 }
 
 /* ///////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////// */
-@media (max-width: 800px) {
+//////////////////////////////////////////////////////////////
+---------------------property on mobil----------------------*/
+@media (max-width: 800px) { 
 }
 
-
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+---------------------import all font----------------------- */
 @font-face {
     font-family: "UnistraA-Regular";
     src: url("font/UnistraA-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Italic";
+    src: url("font/UnistraA-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Bold";
+    src: url("font/UnistraA-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraB-Regular";
+    src: url("font/UnistraB-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Italic";
+    src: url("font/UnistraB-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Bold";
+    src: url("font/UnistraB-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraC-Regular";
+    src: url("font/UnistraC-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraC-Italic";
+    src: url("font/UnistraC-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraC-Bold";
+    src: url("font/UnistraC-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraD-Regular";
+    src: url("font/UnistraD-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraD-Italic";
+    src: url("font/UnistraD-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraD-Bold";
+    src: url("font/UnistraD-Bold.ttf") format("truetype");
 }
