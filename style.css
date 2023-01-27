@@ -207,6 +207,10 @@ footer{
 .contact li{
     margin: 10px;
 }
+.contact .fa:hover{
+    position: relative;
+    transform: translateY(-50%) scale(1.1);
+}
 .copyright{
     text-align: center;
     font-size: medium;
