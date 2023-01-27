@@ -9,7 +9,7 @@ body{
     margin: 0;
     font-size: 1.5em;
     background-color: #2F4550;
-    color: #fafaf9;
+    color: #f4f4f9;
     font-family: 'UnistraB-Regular','Courier New', Courier, monospace;
 }
 
@@ -20,7 +20,10 @@ body{
     font-size: 2em;
     font-family: 'UnistraD-Bold','Courier New', Courier, monospace;
 }
-
+a {
+    color: #5e5e5e;
+    text-decoration: none;
+}
 
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
@@ -54,11 +57,8 @@ body{
         margin-left: 5px;
         transition: 1s;
     }
-    .pic{
-        width: 25px;
-        height: 25px;
-        border-radius: 100% 2px 100% 2px;
-        background-color: #7bade1;
+    header .fa-link{
+        color: #7bade1;
         transition: 1s;
     }
     .txt:hover {
@@ -91,39 +91,46 @@ body{
         min-height: 500px;
         padding: 50px;
         display: flex;
-        flex-direction: row;
-    }
-    .box:nth-child(2n){
-        display: flex;
-        flex-direction: row-reverse;
-        color: black;
+        align-items: center;
     }
     .shape {
-        background-color: aqua;
         border-radius: 100%;
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         transition: 1s;
     }
-    .text:nth-child(1){
-        padding: 50px;
+    .formation {
+        background-image: url("assets/light.jpg");
+        background-size: cover;
+        transition: 3s;
     }
-    .box:nth-child(2n) .shape {
-        display: none;
-        background-color: blue;
-        border-radius: 10% 30% 10% 100%;
+    .formation:hover .title{
+        text-decoration: underline;
     }
-    .one{
-        background-image: url("assets/");
+    
+    img {
+        --s: 250px;   /* the size of the image */
+        --b: 5px;     /* the border thickness*/
+        --g: 20px;    /* the gap */
+        --c: #586f7c; /* the color */
+        
+        width: var(--s);
+        aspect-ratio: 1;
+        outline: calc(var(--s)/2) solid #0009;
+        outline-offset: calc(var(--s)/-2);
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 100%;
     }
+    img:hover {
+        outline: var(--b) solid var(--c);
+        outline-offset: var(--g);
+    }
+      
     ul{
         list-style-type: none;
     }
 
-    /*indetification*/
-    .box:nth-child(2n){
-        background-color: #7bade1;
-    }
     /*/////////////CONTENT END///////////////*/
 
     /*/////////////FOOTER BEGIN///////////////*/
@@ -132,13 +139,31 @@ body{
         flex-direction: row;
         background-color: rgb(22, 22, 22);
         color: #bdbdbd;
+        padding: 20px;
     }
     .end{
-        
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        width: 30vw;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-end;
+        min-width: 70vw;
+    }
+    .contact ul, p{
+        display: flex;
+        flex-direction: row;
+    }
+    .contact li{
+        margin: 10px;
     }
     .copyright{
         text-align: center;
-        font-size: small;
+        font-size: medium;
     }
     /*/////////////FOOTER END///////////////*/    
 }
