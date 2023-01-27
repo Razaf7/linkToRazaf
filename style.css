@@ -25,153 +25,163 @@ a {
     text-decoration: none;
 }
 
+/*/////////////HEADER BEGIN///////////////*/
+header{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-image: url("assets/sky.jpg");
+    background-attachment: fixed;
+}
+.logo {
+    font-size: 2em;
+    font-family: 'UnistraC-Bold';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    transition: 1s;
+    cursor: pointer;
+}
+.txt{
+    margin-left: 5px;
+    transition: 1s;
+}
+header .fa-link{
+    color: #7bade1;
+    transition: 1s;
+}
+.txt:hover {
+    letter-spacing: 2px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    font-family: 'UnistraB-Bold';
+    width: 60vw;
+    height: 100%;
+    background-color: #2f455070;
+}
+#nom, #prenom{
+    font-family: 'UnistraA-Regular';
+    font-size: 3em;
+}
+/*/////////////HEADER END///////////////*/
+
+/*/////////////CONTENT BEGIN///////////////*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    min-width: 100vw;
+    min-height: 500px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+.shape {
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+}
+.formation {
+    background-image: url("assets/light.jpg");
+    background-size: cover;
+    transition: 3s;
+}
+.formation:hover .title{
+    text-decoration: underline;
+}
+
+img {
+    --s: 250px;   /* the size of the image */
+    --b: 5px;     /* the border thickness*/
+    --g: 20px;    /* the gap */
+    --c: #586f7c; /* the color */
+    
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid #0009;
+    outline-offset: calc(var(--s)/-2);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 100%;
+}
+img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+  
+ul{
+    list-style-type: none;
+}
+
+/*/////////////CONTENT END///////////////*/
+
+/*/////////////FOOTER BEGIN///////////////*/
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(22, 22, 22);
+    color: #bdbdbd;
+    padding: 20px;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 30vw;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-end;
+    min-width: 70vw;
+}
+.contact ul, p{
+    display: flex;
+    flex-direction: row;
+}
+.contact li{
+    margin: 10px;
+}
+.copyright{
+    text-align: center;
+    font-size: medium;
+}
+/*/////////////FOOTER END///////////////*/
+
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 --------------------property on laptop----------------------*/
 @media (min-width: 800px) {
-    /*/////////////HEADER BEGIN///////////////*/
-    header{
-        width: 100vw;
-        height: 500px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        background-image: url("assets/sky.jpg");
-        background-attachment: fixed;
-    }
-    .logo {
-        font-size: 2em;
-        font-family: 'UnistraC-Bold';
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 30vw;
-        height: 100%;
-        padding: 20px;
-        margin-top: 30px;
-        transition: 1s;
-        cursor: pointer;
-    }
-    .txt{
-        margin-left: 5px;
-        transition: 1s;
-    }
-    header .fa-link{
-        color: #7bade1;
-        transition: 1s;
-    }
-    .txt:hover {
-        letter-spacing: 2px;
-    }
-    
-    .about {
-        display: flex;
-        align-items: center;
-        font-family: 'UnistraB-Bold';
-        width: 60vw;
-        height: 100%;
-        background-color: #2f455070;
-    }
-    #nom, #prenom{
-        font-family: 'UnistraA-Regular';
-        font-size: 3em;
-    }
-    /*/////////////HEADER END///////////////*/
+    /*default stuff*/
 
-    /*/////////////CONTENT BEGIN///////////////*/
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .box{
-        min-width: 100vw;
-        min-height: 500px;
-        padding: 50px;
-        display: flex;
-        align-items: center;
-    }
-    .shape {
-        border-radius: 100%;
-        width: 300px;
-        height: 300px;
-        transition: 1s;
-    }
-    .formation {
-        background-image: url("assets/light.jpg");
-        background-size: cover;
-        transition: 3s;
-    }
-    .formation:hover .title{
-        text-decoration: underline;
-    }
-    
-    img {
-        --s: 250px;   /* the size of the image */
-        --b: 5px;     /* the border thickness*/
-        --g: 20px;    /* the gap */
-        --c: #586f7c; /* the color */
-        
-        width: var(--s);
-        aspect-ratio: 1;
-        outline: calc(var(--s)/2) solid #0009;
-        outline-offset: calc(var(--s)/-2);
-        cursor: pointer;
-        transition: 0.3s;
-        border-radius: 100%;
-    }
-    img:hover {
-        outline: var(--b) solid var(--c);
-        outline-offset: var(--g);
-    }
       
-    ul{
-        list-style-type: none;
-    }
-
-    /*/////////////CONTENT END///////////////*/
-
-    /*/////////////FOOTER BEGIN///////////////*/
-    footer{
-        display: flex;
-        flex-direction: row;
-        background-color: rgb(22, 22, 22);
-        color: #bdbdbd;
-        padding: 20px;
-    }
-    .end{
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-        width: 30vw;
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        justify-content: flex-end;
-        min-width: 70vw;
-    }
-    .contact ul, p{
-        display: flex;
-        flex-direction: row;
-    }
-    .contact li{
-        margin: 10px;
-    }
-    .copyright{
-        text-align: center;
-        font-size: medium;
-    }
-    /*/////////////FOOTER END///////////////*/    
 }
 
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 ---------------------property on mobil----------------------*/
 @media (max-width: 800px) { 
+    header, .content, .box, footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* ///////////////////////////////////////////////////////////
