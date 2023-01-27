@@ -19,9 +19,11 @@ body{
 .title{
     font-size: 2em;
     font-family: 'UnistraD-Bold','Courier New', Courier, monospace;
+    transition: 0.5s;
+    margin: 0;
 }
 a {
-    color: #5e5e5e;
+    color: #1c3791;
     text-decoration: none;
 }
 
@@ -46,7 +48,6 @@ header{
     height: 100%;
     padding: 20px;
     margin-top: 30px;
-    transition: 1s;
     cursor: pointer;
 }
 .txt{
@@ -57,7 +58,7 @@ header .fa-link{
     color: #7bade1;
     transition: 1s;
 }
-.txt:hover {
+.logo:hover {
     letter-spacing: 2px;
 }
 
@@ -84,10 +85,11 @@ header .fa-link{
 }
 .box{
     min-width: 100vw;
-    min-height: 500px;
+    min-height: 100vh;
     padding: 50px;
     display: flex;
     align-items: center;
+    transition: 2s;
 }
 .shape {
     border-radius: 100%;
@@ -96,32 +98,79 @@ header .fa-link{
     transition: 1s;
 }
 .formation {
-    background-image: url("assets/light.jpg");
-    background-size: cover;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.52), rgba(68, 68, 68, 0.73)), url('assets/light.jpg');
+    /* background-size: cover; */
     transition: 3s;
 }
-.formation:hover .title{
-    text-decoration: underline;
+.formation .details{
+    position: relative;
+    top: -50px;
 }
-
-img {
-    --s: 250px;   /* the size of the image */
-    --b: 5px;     /* the border thickness*/
-    --g: 20px;    /* the gap */
-    --c: #586f7c; /* the color */
-    
-    width: var(--s);
+.formation:hover .title{
+    position: relative;
+    transform: translateX(10px);
+}
+.arrow{
+    position: relative;
+    top: -10px;
+    left: 5px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+.formation:hover .arrow{
+    position: relative;
+    transform: translate(10px, -10px) rotate(-45deg);
+}
+.boite {
+    border-radius: 10px;
+    padding: 20px;
+    transition: 1s;
+    height: inherit;
+    width: 70vw;
+    margin-left: 10vw;
+}
+.formation:hover .boite{
+    background-color: #a1a1a1b2;
+    box-shadow: 2px 2px 10px #22333b;
+    animation: tild 1s both;
+}
+@keyframes tild {
+    25% {
+        transform: translate(-20px, 20px);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+} 
+.parcours p .first{
+    position: relative;
+    top: 50px
+}
+.parcours img {
+    width: 250px;
     aspect-ratio: 1;
-    outline: calc(var(--s)/2) solid #0009;
-    outline-offset: calc(var(--s)/-2);
+    outline: calc(250px/2) solid #0009;
+    outline-offset: calc(250px/-2);
     cursor: pointer;
     transition: 0.3s;
     border-radius: 100%;
 }
-img:hover {
-    outline: var(--b) solid var(--c);
-    outline-offset: var(--g);
+.parcours:hover img {
+    outline: 5px solid #586f7c;
+    outline-offset: 20px;
 }
+
+.illustration{
+    position: relative;
+    left: 90%;
+    transform: translateY(-50%);
+}
+.illustration img{
+    color: #1c3791;
+    width: 200px;
+}
+
+
   
 ul{
     list-style-type: none;
@@ -142,6 +191,7 @@ footer{
     justify-content: center;
     margin-top: 50px;
     width: 30vw;
+    cursor: pointer;
 }
 .contact{
     display: flex;
