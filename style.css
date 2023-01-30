@@ -23,14 +23,15 @@ body{
     margin: 0;
 }
 a {
-    color: #1c3791;
+    display: inherit;
+    color: #6a80c9;
     text-decoration: none;
 }
 
 /*/////////////HEADER BEGIN///////////////*/
 header{
     width: 100vw;
-    height: 500px;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -97,18 +98,30 @@ header .fa-link{
     height: 300px;
     transition: 1s;
 }
+.parcours {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.651), rgba(68, 68, 68, 0.781)), url('assets/geo.jpg');
+    transition: 3s;
+}
 .formation {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.52), rgba(68, 68, 68, 0.73)), url('assets/light.jpg');
-    /* background-size: cover; */
+    /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.651), rgba(68, 68, 68, 0.781)), url('assets/light.jpg'); */
+    background-color: #22333b;
+    transition: 3s;
+}
+.projet {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.781)), url('assets/code.jpg');
+    background-size: cover;
     transition: 3s;
 }
 .formation .details{
     position: relative;
     top: -50px;
 }
-.formation:hover .title{
+.formation:hover .title, .parcours:hover .title, .parcours:hover ul{
     position: relative;
     transform: translateX(10px);
+}
+.parcours:hover .title, .parcours:hover ul {
+    transform: scale(1.1) translateX(50px);
 }
 .arrow{
     position: relative;
@@ -122,15 +135,15 @@ header .fa-link{
     transform: translate(10px, -10px) rotate(-45deg);
 }
 .boite {
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 7px;
+    padding: 5px 50px 5px;
     transition: 1s;
     height: inherit;
     width: 70vw;
     margin-left: 10vw;
 }
 .formation:hover .boite{
-    background-color: #a1a1a1b2;
+    background-color: #707070b2;
     box-shadow: 2px 2px 10px #22333b;
     animation: tild 1s both;
 }
@@ -160,20 +173,28 @@ header .fa-link{
     outline-offset: 20px;
 }
 
-.illustration{
+.top{
     position: relative;
     left: 90%;
     transform: translateY(-50%);
 }
-.illustration img{
-    color: #1c3791;
+.top img{
     width: 200px;
 }
-
+.img {
+    margin: 20px;
+    width: 300px;
+    float: left;
+    border-radius: 5px;
+}
+.split {
+    width: 50%;
+}
 
   
 ul{
     list-style-type: none;
+    transition: 0.5s;
 }
 
 /*/////////////CONTENT END///////////////*/
@@ -207,9 +228,24 @@ footer{
 .contact li{
     margin: 10px;
 }
+.fa {
+    transition: 0.5s;
+}
 .contact .fa:hover{
     position: relative;
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.4) translateY(-40%);
+}
+.fa-facebook:hover {
+    color: #3b5998;
+}
+.fa-twitter:hover {
+    color: #5d8ffa;
+}
+.fa-instagram:hover {
+    color: #e64545;
+}
+.fa-linkedin:hover {
+    color: #2851a8;
 }
 .copyright{
     text-align: center;
